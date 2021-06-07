@@ -19,18 +19,22 @@ permalinks:
 menu:
   main:
   - identifier: about
+    pre: '<i class="fas fa-home"></i>'
     name: About
     url: /
     weight: 1
 
   - identifier: blog
     name: Blog
+    pre: '<i class="fas fa-blog"></i>'
     url: /blog/
     weight: 2
 
 
   - identifier: links
     name: Links
+    pre: '<i class="fas fa-link"></i>'
     url: /
     weight: 3
+    parent: about
 
