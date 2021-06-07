@@ -1,0 +1,209 @@
+@font-face {
+  font-family: mychinese;
+  src: local("SimSun"), url("./fonts/Chinese fonts/SimSun.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: mychinese;
+  src: local("SimHei"), url("./fonts/Chinese fonts/SimHei.ttf");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: mychinese;
+  src: local("Kaiti"), url("./fonts/Chinese fonts/Kaiti.ttf");
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Computer Modern Serif";
+  src: url("./fonts/Computer Modern/Serif/cmunrm.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Computer Modern Serif";
+  src: url("./fonts/Computer Modern/Serif/cmunbx.ttf");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Computer Modern Serif";
+  src: url("./fonts/Computer Modern/Serif/cmunti.ttf");
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Computer Modern Serif";
+  src: url("./fonts/Computer Modern/Serif/cmunbi.ttf");
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Computer Modern Sans";
+  src: url("./fonts/Computer Modern/Sans/cmunss.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Computer Modern Sans";
+  src: url("./fonts/Computer Modern/Sans/cmunsx.ttf");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Computer Modern Sans";
+  src: url("./fonts/Computer Modern/Sans/cmunsi.ttf");
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Computer Modern Sans";
+  src: url("./fonts/Computer Modern/Sans/cmunso.ttf");
+  font-weight: bold;
+  font-style: italic;
+}
+
+/*
+ * General stuff
+ */
+
+html {
+    font-size: 14px;
+}
+
+body {
+    font-family: "Computer Modern Serif", Arial, mychinese;
+    display: block;
+    background: #FFF;
+    max-width: 960px;
+    margin: auto;
+}
+
+strong {
+    color: #C41E3A; /* Cardinal Red */
+}
+
+footer {
+    margin-top: 24px;
+    padding: 12px;
+}
+
+/*
+ * Links
+ */
+
+a:link, a:visited {
+    color: #0000cc;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #D2042D; /* Cherry */
+    text-decoration: underline;
+}
+
+/*
+ * H1 -- H4, don't use H5 and H6
+ */
+
+h1 {
+    display: block;
+    font-weight: bold;
+    font-size: 2em;
+    font-family: "Computer Modern Sans", Arial, mychinese;
+}
+
+h2 {
+    font-weight: bold;
+    font-size: 1.75em;
+    font-family: "Computer Modern Sans", Arial, mychinese;
+}
+
+h3 {
+    font-weight: bold;
+    font-size: 1.5em;
+    font-family: "Computer Modern Sans", Arial, mychinese;
+}
+
+h4 {
+    font-weight: bold;
+    font-size: 1.25em;
+    font-family: "Computer Modern Sans", Arial, mychinese;
+}
+
+.badge {
+    font-size: 0.85em;
+    vertical-align: text-bottom;
+}
+
+.post-info a:link, .post-info a:hover, .post-info a:visited {
+    color: #cc00cc;
+}
+
+.post-info .badge a:link, .post-info .badge a:hover, .post-info .badge a:visited {
+    color: white !important;
+}
+
+.color-date {
+    color: #cc00cc;
+}
+
+.content-title {
+    margin-bottom: 16px;
+    margin-top: 20px;
+}
+
+#last-modified {
+    font-size: 12px;
+    margin-top: 6px;
+}
+
+.menu-list {
+    font-family: "Computer Modern Sans";
+}
+
+#header {
+    margin-top: 12px;
+    border: 2px solid #0000cc; /* blue */
+    font-variant: small-caps;
+    border-radius: 10px;
+    padding: 12px;
+    background-color: #FFFFF0; /* gold */
+}
+
+#site-subtitle {
+    font-family: "Computer Modern Serif", Arial, mychinese;
+    font-style: italic;
+    font-variant: normal;
+    color: #00A36C; /* jade */
+}
+
+#content {
+    margin-top: 12px;
+}
+
+#side-content {
+    border: 2px solid #00A36C; /* jade */
+    border-radius: 10px;
+    background-color: rgba(192, 192, 192, 0.33); /* silver */
+    padding: 12px;
+    margin-top: 12px;
+    line-height: 200%;
+}
+
+#main-content {
+    border: 2px solid #D2042D; /* cherry */
+    line-height: 150%;
+    border-radius: 10px;
+    padding: 12px;
+    margin-top: 12px;
+    background-color: #FCF5E5; /* parchment */
+}
+
+mjx-container {
+    overflow-x: auto;
+    overflow-y: hidden;
+    max-width: 100%;
+}
