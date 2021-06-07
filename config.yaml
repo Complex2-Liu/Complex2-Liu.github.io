@@ -34,7 +34,7 @@ menu:
   - identifier: links
     name: Links
     pre: '<i class="fas fa-link"></i>'
-    url: /
+    url: /links
     weight: 3
     parent: about
 
