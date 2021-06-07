@@ -183,6 +183,12 @@ ul.sub-menu {
     text-indent: 2px;
 }
 
+#avatar {
+    margin-top: 10px;
+    border-radius: 50%;
+    border: 2px solid;
+}
+
 #header {
     margin-top: 12px;
     border: 2px solid #0000cc; /* blue */
