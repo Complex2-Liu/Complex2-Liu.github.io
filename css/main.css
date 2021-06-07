@@ -164,7 +164,7 @@ h6 {
 
 .content-title {
     margin-bottom: 16px;
-    margin-top: 20px;
+    margin-top: 16px;
 }
 
 #last-modified {
@@ -187,6 +187,14 @@ ul.sub-menu {
     margin-top: 10px;
     border-radius: 50%;
     border: 2px solid;
+}
+
+#sitetitle a:link, #sitetitle a:visited {
+    color: #000;
+}
+
+#sitetitle a:hover {
+    text-decoration: none;
 }
 
 #header {
