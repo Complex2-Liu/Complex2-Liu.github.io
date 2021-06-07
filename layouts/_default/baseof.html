@@ -34,7 +34,7 @@
 <div class="col-12">
 <div id="header">
 <h1 id="sitetitle">
-Complex2-Liu | 老爹
+    <a href="{{ .Site.BaseURL }}">Complex2-Liu | 老爹</a>
 <img height=54 src="/img/yin-yang.svg" style="vertical-align:text-bottom">
 </h1>
 <div id="site-subtitle">One can not turn back the hands of time.</div>
@@ -55,22 +55,29 @@ Complex2-Liu | 老爹
     <div class="collapse menu-list navbar-collapse d-md-block" id="navbarNav">
         {{ $currentPage := . }}
         {{ range .Site.Menus.main }}
+            {{ $tmp := $currentPage.Site.GetPage .URL }}
             {{ if .HasChildren }}
-                <h5 class="{{ if $currentPage.HasMenuCurrent "main" . }}active{{ end }}">
+            {{ $IsHome := eq .Name "About" }}
+            {{ if $IsHome }}
+                <h5 class=>
+            {{ else }}
+                <h5 class="{{ if $currentPage.IsDescendant $tmp }}active{{ end }}">
+            {{ end }}
                         {{ .Pre }}&nbsp;
-                    <a href="#">
+                    <a href=" {{ .URL }}">
                         <span>{{ .Name }}</span>
                     </a>
                 </h5>
                 <ul class="sub-menu">
                     {{ range .Children }}
-                        <li><h6 class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
+                    {{ $tmp2 := $currentPage.Site.GetPage .URL }}
+                        <li><h6 class="{{ if $currentPage.IsDescendant $tmp2 }}active{{ end }}">
                             <a href="{{ .URL }}">{{ .Name }}</a>
                         </h6></li>
                     {{ end }}
                 </ul>
             {{ else }}
-                <h5 class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
+            <h5 class="{{ if $currentPage.IsDescendant $tmp }}active{{ end }}">
                         {{ .Pre }}&nbsp;
                     <a href="{{ .URL }}">
                         <span>{{ .Name }}</span>
