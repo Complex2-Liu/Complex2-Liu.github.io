@@ -248,3 +248,16 @@ h6.active a:link, h6.active a:hover, h6.active a:visited {
     color: #D2042D; /* cherry */
 }
 
+code {
+    font-family: Menlo;
+}
+
+blockquote {
+    margin-bottom: 16px;
+    margin-top: 16px;
+    padding: 0 1em;
+    color: #555;
+    border-left: .25em solid #666;
+    background-color: rgba(222,222,222, 0.5);
+}
+
