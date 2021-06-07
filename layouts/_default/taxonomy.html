@@ -1,0 +1,18 @@
+{{ define "main" }}
+<h1 align="center" class="content-title">{{ .Data.Singular }}: {{ .Title }}</h1>
+<hr>
+<p>
+All pages associated with {{ .Data.Singular }}
+    {{if eq .Data.Plural "tags" }}
+    <span class="badge bg-secondary">{{ .Title }}</span>
+    {{ else }}
+    <span class="badge bg-primary">{{ .Title }}</span>
+    {{ end }}
+are listed below:
+</p>
+<ul>
+    {{ range .Data.Pages }}
+        <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+    {{ end }}
+</ul>
+{{ end }}

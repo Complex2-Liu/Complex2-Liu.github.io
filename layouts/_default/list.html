@@ -1,0 +1,14 @@
+{{ define "main" }}
+<h1 align="center" class="content-title">{{ .Title }}</h1>
+{{ .Content }}
+<hr>
+<p>Now All pages are listed below:</p>
+<ul>
+<!-- Ranges through content/posts/*.md -->
+{{ range .Pages.ByDate }}
+    <li>
+        <a href="{{.Permalink}}">{{.Title}}</a>
+    </li>
+{{ end }}
+</ul>
+{{ end }}

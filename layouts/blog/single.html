@@ -1,0 +1,18 @@
+{{ define "main" }}
+<h1 align="center" class="content-title">{{ .Title }}</h1>
+<div align="center" class="post-info">
+<span class="color-date">Date:</span> {{ .Date.Format "January 2, 2006" }}&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="{{ "/categories/" | relURL }}">Categories:</a> {{ with .Params.categories }}
+    {{ range . }}
+    <span class="badge bg-primary"><a href="{{ "/categories/" | relURL }}{{ . | urlize }}">{{ . }}</a></span>
+    {{ end }}
+    {{ end }}&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="{{ "/tags/" | relURL }}">Tags:</a> {{ with .Params.tags }}
+    {{ range . }}
+    <span class="badge bg-secondary"><a href="{{ "/tags/" | relURL }}{{ . | urlize }}">{{ . }}</a></span>
+    {{ end }}
+    {{ end }}
+</div>
+<hr>
+{{ .Content }}
+{{ end}}

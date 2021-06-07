@@ -1,0 +1,27 @@
+{{ define "main" }}
+<h1 align="center" class="content-title">Blog</h1>
+<p>
+Welcome to my blog!
+You can browse it by date below, or by
+<ul>
+    <li>
+        <a href="{{ "/tags/" | relURL }}">tags</a>
+    </li>
+    <li>
+        <a href="{{ "/categories/" | relURL}}">categories</a>.
+    </li>
+</ul>
+</p>
+{{ .Content }}
+<hr>
+{{ range .Pages.GroupByDate "2006" }}
+<h2>{{ .Key }}:</h2>
+<ul>
+    {{ range .Pages }}
+    <li>
+    <span class="date">{{ .Date.Format "Jan 2, 2006" }}</span> <a href="{{ .Permalink }}">{{ .Title }}</a>
+    </li>
+    {{ end }}
+</ul>
+{{ end }}
+{{ end }}

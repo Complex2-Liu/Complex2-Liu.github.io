@@ -1,0 +1,36 @@
+baseURL: "https://complex2math.com"
+languageCode: "en-us"
+title: "Homepage of Complex2-Liu"
+enableGitInfo: true
+
+markup:
+  highlight:
+    lineNumbersInTable: false
+    style: xcode
+    linenos: true
+
+taxonomies:
+  category: categories
+  tag: tags
+
+permalinks:
+  blog: /:section/:year/:month/:title/
+
+menu:
+  main:
+  - identifier: about
+    name: About
+    url: /
+    weight: 1
+
+  - identifier: blog
+    name: Blog
+    url: /blog/
+    weight: 2
+
+
+  - identifier: links
+    name: Links
+    url: /
+    weight: 3
+

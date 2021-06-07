@@ -1,0 +1,15 @@
+{{ define "main" }}
+<h1 align="center" class="content-title">{{ .Title }}</h1>
+<hr>
+<p>
+{{ range .Data.Terms.ByCount }}
+    {{if eq .Page.Data.Plural "tags" }}
+    <span><span class="badge bg-secondary">{{ .Page.Title }}</span> (<a href="{{ .Page.Permalink }}">{{ .Count }}</a>)</span>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    {{ else }}
+    <span><span class="badge bg-primary">{{ .Page.Title }}</span> (<a href="{{ .Page.Permalink }}">{{ .Count }}</a>)</span>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    {{ end }}
+{{ end }}
+</p>
+{{ end }}

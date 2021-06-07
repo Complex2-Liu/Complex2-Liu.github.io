@@ -1,0 +1,11 @@
+{{ define "main" }}
+<h1 align="center" class="content-title">{{ .Title }}</h1>
+{{ .Content }}
+
+<h2>Recent Posts</h2>
+<ul>
+{{- range (where site.RegularPages "Section" "blog" | first 3) }}
+    <li>{{ .Date.Format "Jan 2, 2006" }}  <a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+{{ end }}
+</ul>
+{{ end }}
