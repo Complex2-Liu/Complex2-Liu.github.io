@@ -105,8 +105,8 @@ a:hover {
 }
 
 /*
- * H1 -- H4, don't use H5 and H6
- */
+ * H1 -- H6, H5 and H6 are used for site-content
+ * */
 
 h1 {
     display: block;
@@ -130,6 +130,18 @@ h3 {
 h4 {
     font-weight: bold;
     font-size: 1.25em;
+    font-family: "Computer Modern Sans", Arial, mychinese;
+}
+
+h5 {
+    font-weight: normal;
+    font-size: 16px;
+    font-family: "Computer Modern Sans", Arial, mychinese;
+}
+
+h6 {
+    font-weight: normal;
+    font-size: 15px;
     font-family: "Computer Modern Sans", Arial, mychinese;
 }
 
@@ -157,11 +169,18 @@ h4 {
 
 #last-modified {
     font-size: 12px;
-    margin-top: 6px;
+    margin-top: 12px;
 }
 
 .menu-list {
-    font-family: "Computer Modern Sans";
+    font-size: 16px;
+    margin-left: 6px;
+    overflow-y: auto;
+}
+
+ul.sub-menu {
+    margin-left: 10px;
+    text-indent: 2px;
 }
 
 #header {
@@ -207,3 +226,19 @@ mjx-container {
     overflow-y: hidden;
     max-width: 100%;
 }
+
+.navbar-brand {
+    font-family: "Computer Modern Sans";
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-top: 2px;
+}
+
+h5.active a:link, h5.active a:hover, h5.active a:visited {
+    color: #D2042D; /* cherry */
+}
+
+h6.active a:link, h6.active a:hover, h6.active a:visited {
+    color: #D2042D; /* cherry */
+}
+

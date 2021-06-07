@@ -4,6 +4,7 @@
 <head>
 <title>Complex2-Liu &bullet; {{ .Title }}</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 <link rel="apple-touch-icon" sizes="180x180" href="/img/avatar.jpg">
 <link rel="icon" type="image/png" href="/img/avatar.jpg" sizes="32x32">
 <link rel="icon" type="image/png" href="/img/avatar.jpg" sizes="16x16">
@@ -43,38 +44,46 @@ Complex2-Liu | 老爹
 
 <div id="content" class="row">
 
-<div class="col-12 col-sm-3 order-sm-2">
+<div class="col-12 col-md-3 order-md-2">
     <div id="side-content">
-    <h3><i class="fas fa-sitemap"></i> Menu:</h3>
-    <div class="menu-list">
-    <ul>
+    <nav class="navbar navbar-expand-md navbar-light">
+        <span class="navbar-brand"><i class="fas fa-sitemap"></i> Menu</span>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+    </nav>
+    <div class="collapse menu-list navbar-collapse d-md-block" id="navbarNav">
+        {{ $currentPage := . }}
         {{ range .Site.Menus.main }}
             {{ if .HasChildren }}
-                <li>
-                    <a href="{{ .URL }}">
+                <h5 class="{{ if $currentPage.HasMenuCurrent "main" . }}active{{ end }}">
+                        {{ .Pre }}&nbsp;
+                    <a href="#">
                         <span>{{ .Name }}</span>
                     </a>
-                </li>
+                </h5>
                 <ul class="sub-menu">
                     {{ range .Children }}
-                        <li>
+                        <li><h6 class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
                             <a href="{{ .URL }}">{{ .Name }}</a>
-                        </li>
+                        </h6></li>
                     {{ end }}
                 </ul>
             {{ else }}
-                <li>
+                <h5 class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
+                        {{ .Pre }}&nbsp;
                     <a href="{{ .URL }}">
                         <span>{{ .Name }}</span>
                     </a>
-                </li>
+                </h5>
             {{ end }}
         {{ end }}
-    </ul>
     </div>
+
     <hr>
+
     <div align="center">
-    <img height=80 src="/img/avatar.jpg" style="vertical-align:text-bottom;">
+    <img height=120 src="/img/avatar.jpg" style="vertical-align:text-bottom; margin-top: 12px;">
     </div>
     <div id="last-modified">
     <small><i class="fas fa-user-edit"></i> Last modified: {{ now.Format "Jan 2, 15:04:05, 2006" }}.</small>
@@ -82,7 +91,7 @@ Complex2-Liu | 老爹
     </div>
 </div>
 
-<div class="col-12 col-sm-9 order-sm-1">
+<div class="col-12 col-md-9 order-md-1">
     <div id="main-content">
     {{ block "main" . }}{{ end }}
     </div>
