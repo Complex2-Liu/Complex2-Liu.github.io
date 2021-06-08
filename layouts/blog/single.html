@@ -6,13 +6,13 @@
 <i class="fas fa-folder-open"></i> <a href="{{ "/categories/" | relURL }}">Categories:</a>
 {{ with .Params.categories }}
     {{ range . }}
-    <span class="badge bg-primary"><a href="{{ "/categories/" | relURL }}{{ . | urlize }}">{{ . }}</a></span>
+    <span class="badge bg-success"><a href="{{ "/categories/" | relURL }}{{ . | urlize }}">{{ . }}</a></span>
     {{ end }}
     {{ end }}&nbsp;&nbsp;&nbsp;&nbsp;
 <i class="fas fa-tags"></i> <a href="{{ "/tags/" | relURL }}">Tags:</a>
 {{ with .Params.tags }}
     {{ range . }}
-    <span class="badge bg-secondary"><a href="{{ "/tags/" | relURL }}{{ . | urlize }}">{{ . }}</a></span>
+    <span class="badge bg-dark"><a href="{{ "/tags/" | relURL }}{{ . | urlize }}">{{ . }}</a></span>
     {{ end }}
     {{ end }}
 </div>
