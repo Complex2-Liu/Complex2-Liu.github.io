@@ -146,7 +146,7 @@ h6 {
 }
 
 .badge {
-    font-size: 0.85em;
+    font-size: 12px;
     vertical-align: text-bottom;
 }
 
@@ -199,11 +199,11 @@ ul.sub-menu {
 
 #header {
     margin-top: 12px;
-    border: 2px solid #0000cc; /* blue */
+    border: 2px solid #000;
     font-variant: small-caps;
     border-radius: 10px;
     padding: 12px;
-    background-color: #FFFFF0; /* gold */
+    background-color: #FFFFF0; /* ivory */
 }
 
 #site-subtitle {
@@ -211,6 +211,7 @@ ul.sub-menu {
     font-style: italic;
     font-variant: normal;
     color: #00A36C; /* jade */
+    margin-bottom: 6px;
 }
 
 #content {
@@ -218,7 +219,7 @@ ul.sub-menu {
 }
 
 #side-content {
-    border: 2px solid #00A36C; /* jade */
+    border: 2px solid #228B22; /* forest green */
     border-radius: 10px;
     background-color: rgba(192, 192, 192, 0.33); /* silver */
     padding: 12px;
@@ -258,6 +259,7 @@ h6.active a:link, h6.active a:hover, h6.active a:visited {
 
 code {
     font-family: Menlo;
+    color: #00A36C; /* jade */
 }
 
 blockquote {
@@ -269,3 +271,10 @@ blockquote {
     background-color: rgba(222,222,222, 0.5);
 }
 
+.img-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1rem;
+  width: 75%;
+}
