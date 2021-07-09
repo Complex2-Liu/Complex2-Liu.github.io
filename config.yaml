@@ -4,6 +4,9 @@ title: "Homepage of Complex2-Liu"
 enableGitInfo: true
 
 markup:
+  goldmark:
+    renderer:
+      unsafe: true
   highlight:
     lineNumbersInTable: false
     style: xcode
